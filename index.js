@@ -7,7 +7,7 @@ const PORT = 3000;
 app.use(cors());
 
 app.get("/api/ideas", async (req, res) => {
-  const { page = 1, size = 10, sort = "-published_at" } = req.query;
+  const { page = 1, size = 100, sort = "-published_at" } = req.query;
 
   try {
     const response = await axios.get("https://suitmedia-backend.suitdev.com/api/ideas", {
